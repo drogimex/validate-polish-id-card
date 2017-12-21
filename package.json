@@ -1,0 +1,24 @@
+{
+  "name": "polish-id-card-validate",
+  "version": "1.0.0",
+  "description": "Polish personal ID card validator.",
+  "main": "polish-id-card-validate",
+  "scripts": {
+    "test": "jest",
+	"eslint": "./node_modules/.bin/eslint -c .eslintrc.js *.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drogimex/polish-id-card-validate.git"
+  },
+  "author": "Tomasz Sochacki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drogimex/polish-id-card-validate/issues"
+  },
+  "homepage": "https://github.com/drogimex/polish-id-card-validate#readme",
+  "dependencies": {
+    "eslint": "^4.13.1",
+    "jest": "^22.0.3"
+  }
+}
