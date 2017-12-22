@@ -2,6 +2,8 @@
 
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
+[![NPM Version][npm-version]][npm-url]
+[![Downloads][downloads-image]][npm-url]
 
 Currently polish ID card numbers contains of three letters and six digits. Valid numbers are written in format "XXX NNNNNN", where "X" is a letter and "X" is a digit. The space character is optional.
 
@@ -14,21 +16,21 @@ In algorithm of control digit validation letters are presented as numbers, where
 First steep - instalation from NPM:
 
 ```javascript
-npm install validate-polish-id-card
+npm install polish-id-card-validate
 ```
 
 Using validator in the application code:
 
 ```javascript
-const validatePolishIDCard = require( 'polish-id-card-validate' );
+const validate = require( 'polish-id-card-validate' );
 
-validatePolishIDCard( 'ABS123456' ); //true
-validatePolishIDCard( 'abs123456' ); //true
+validate( 'ABS123456' ); //true
+validate( 'abs123456' ); //true
 
-validatePolishIDCard( 'ABS 123456' ); //true
-validatePolishIDCard( 'abs 123456' ); //true
+validate( 'ABS 123456' ); //true
+validate( 'abs 123456' ); //true
 
-validatePolishIDCard( 'ABS523456' ); //false, invalid control digit!
+validate( 'ABS523456' ); //false, invalid control digit!
 ```
 
 *Validator can be use only for new ID card numbers in format "XXX NNNNNN". For old ID card numbers (without control digit) validator returns always FALSE.*
@@ -36,5 +38,8 @@ validatePolishIDCard( 'ABS523456' ); //false, invalid control digit!
 <!-- vars -->
 [license-image]:https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: #license
-[travis-image]:https://img.shields.io/travis/drogimex/isbn-validate.svg?style=flat-square
-[travis-url]:https://travis-ci.org/drogimex/isbn-validate
+[travis-image]:https://img.shields.io/travis/drogimex/validate-polish-id-card.svg?style=flat-square
+[travis-url]:https://travis-ci.org/drogimex/validate-polish-id-card
+[npm-version]:https://img.shields.io/npm/v/polish-id-card-validate.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/polish-id-card-validate
+[downloads-image]: http://img.shields.io/npm/dm/polish-id-card-validate.svg?style=flat-square
